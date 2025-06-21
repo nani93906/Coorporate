@@ -1,0 +1,351 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    box-sizing: border-box;
+    color: #333;
+  background-color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color:#002147;
+    color: black;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: smokewhite;
+    text-decoration: none;
+}
+
+.login-btn {
+    padding: 8px 16px;
+  background-color: smokewhite;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.banner-text {
+    transform: translate(60%, 0%); 
+    font-size: 50px;
+    color: white;
+    background-color: rgba(0, 33, 71, 0.5); /* Adjust the alpha for transparency */
+    width: 45%;
+}
+
+
+
+.banner {
+    text-align: center;
+    background: url('bannerbgimage.jpg') no-repeat center center; 
+    background-size: cover;
+    height: 350px;
+    padding: 100px 10%;
+}
+
+/* General styling for the search bar container */
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 7px 10px;
+    position: absolute;
+    max-width: 700px;
+    margin-top: 187px;
+    margin-left: 260px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .search {
+    font-size: 14px;
+    font-weight:bolder;
+    color: #002147;
+    background: none;
+  }
+
+   /* Icons */
+   .icon {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+  }
+  
+  .icon img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Input fields styling */
+  /* Input boxes */
+  .search-bar-input {
+    width: 200px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7);
+    transition: box-shadow 0.3s ease
+  }
+  
+  
+  /* Add hover effect for inputs */
+  .search-bar-input:focus {
+    outline: none;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2), inset -1px -1px 3px rgba(255, 255, 255, 0.7);
+  }
+  
+  /* search Button styling */
+  .search-bar-button {
+    margin-left: 10px;
+    padding: 10px 30px;
+    font-size: 16px;
+    background-color: #002147;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.7);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for button */
+  .search-bar-button:hover {
+    background-color: #0056b3;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3), -3px -3px 6px rgba(255, 255, 255, 0.8);
+  }
+
+.connect-steps {
+    padding: 48px 10%;
+    text-align: center;
+    background-color: white;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    display: flex;
+  flex-direction: row;
+}
+
+.connect-steps .step {
+    text-align: center;
+    width: 30%;
+    padding: 90px;
+    border: 0px solid white;
+    border-radius: 15px;
+    transition: transform 0.3s;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4), -3px -3px 6px rgba(0, 0, 0, 0.4);
+  }
+
+.connect-steps .step:hover {
+  transform: scale(1.05);
+}
+
+.feedback-form {
+    padding: 100px 10%;
+    background: url('1.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    opacity: 0.9;
+    text-align: center;
+
+}
+
+.feedback-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    
+}
+
+.feedback-form input, 
+.feedback-form textarea {
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2), inset -1px -1px 3px rgba(255, 255, 255, 0.7);
+    transition: box-shadow 0.3s ease
+    
+  }
+
+.feedback-form button {
+  background-color: #091366;
+  border-radius: 30px;
+  width: 160px;
+  height: 45px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 3px 3px 10px rgba(210, 13, 13, 0), 1px -2px 10px black;
+  }
+
+.architect-profiles {
+    padding: 50px 10%;
+    background-color: white;
+    text-align: center;
+}
+
+.profilesheading{
+  font-size: 26px;
+  transform: translate(0%, -40%);
+  font-family: 'Times New Roman', sans-serif;
+}
+
+.architect-profiles .profiles {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.architect-profiles .profile {
+    text-align: center;
+    width: 30%;
+    border: 5px solid smokewhite;
+    border-radius: 15px;
+    transition: transform 0.3s;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4), -3px -3px 6px rgba(0, 0, 0, 0.4);
+}
+.architect-profiles .profile:hover {
+  transform: scale(1.02);
+}
+.profile img {
+  border-radius: 50%;
+  max-width: 300px;
+  margin-bottom: 10px;
+}
+
+.rating {
+    color: rgb(255, 215, 0);
+}
+.viewallbtn {
+  background-color: #0d55a6;
+  color: white;
+  transform: translate(10%, 60%); 
+  height: 35px;
+  cursor: pointer;
+  box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.3), -3px -3px 6px rgba(255, 255, 255, 0.8);
+  }
+  .newsletter-signup{
+    text-align: center;
+    background: url('104046.jpg') no-repeat center center;
+    color: rgb(14, 12, 12);
+    height: 350px;
+  }
+
+  .newslettertxt {
+    font-size: 24px;
+    padding: 90px;
+    margin-bottom: -70px;
+    text-align: center;
+    
+  }
+  .newsletter-signup input {
+    padding: 10px;
+    width: 300px;
+    margin-right: 5px;
+    border-radius: 5px;
+
+  }
+  .newsletterbtn {
+    padding: 10px 20px;
+    background-color: #ffcb00;
+    color: #002147;
+    border-radius: 12px;
+    border: 1px solid #002147;
+    cursor: pointer;
+  }
+
+
+.footer {
+  background-color:#002147;
+  box-sizing: border-box;
+  height: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items:flex-start;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.footerlogo {
+  margin-top: 100px;
+  margin-left: 100px; 
+}
+
+.socialmedia {
+  color: white;
+  margin-top: 100px;
+  margin-left: 50px;
+}
+
+.quicklinks {
+  margin-top: 80px;
+  margin-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+li {
+  margin: 5px;
+}
+
+a{
+  text-decoration: underline;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #007BFF;
+}
+
+.git {
+  color: white;
+  display: grid;
+  margin-top: 100px;
+  margin-right: 100px;
+}
+
+
+hr { 
+    width: 100%; /* Adjust the width as needed */
+    border-top: 1px solid white;/* Adjust border style and color */
+    margin: 20px auto; /* Center the line */
+  }
+
+.copyright {
+  color: white;
+  font-size: 15px; /* Adjust font size as needed */
+}
