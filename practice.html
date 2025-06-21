@@ -1,46 +1,98 @@
-</DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insightful Architects</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insightful Architects</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ✅ Digital Data Layer -->
+  <script>
+    window.digitalData = {
+      page: {
+        pageInfo: {
+          pageName: "Architect Carousel Page",
+          siteSection: "Gallery",
+          language: "en-US",
+          destinationURL: window.location.href,
+          referringURL: document.referrer
+        }
+      },
+      user: {
+        profile: [{
+          profileInfo: {
+            profileID: "guest", // or dynamically fetched user ID
+            userType: "visitor"
+          }
+        }]
+      },
+      component: [{
+        componentInfo: {
+          componentID: "carousel-architects",
+          componentType: "carousel",
+          status: "loaded"
+        }
+      }],
+      event: []
+    };
+  </script>
 </head>
-<div class="left">
-  left div
-  <button id="left-button">
-  swipe left
-  </button>
-</div>
-<div class="center" id="content">
+
+<body>
+  <div class="left">
+    left div
+    <button id="left-button" onclick="trackSwipe('left')">swipe left</button>
   </div>
-  <div class=internal>
-    <img src="profile1.png" alt="Lanvin Moto" height = "300" width="300">
+
+  <div class="center" id="content"></div>
+
+  <div class="internal">
+    <img src="profile1.png" alt="Lanvin Moto" height="300" width="300">
   </div>
-  <div class=internal>
-    <img src="profile3.png" alt="Lanvin Moto" height = "300" width="300">
+  <div class="internal">
+    <img src="profile3.png" alt="Lanvin Moto" height="300" width="300">
   </div>
-  <div class=internal>
-    <img src="profile3.png" alt="Lanvin Moto" height = "300" width="300">
+  <div class="internal">
+    <img src="profile3.png" alt="Lanvin Moto" height="300" width="300">
   </div>
-  <div class=internal>
-    <img src="profile33.png" alt="Lanvin Moto" height = "300" width="300">
+  <div class="internal">
+    <img src="profile33.png" alt="Lanvin Moto" height="300" width="300">
   </div>
-  <div class=internal>
-    <img src="profile44.png" alt="Lanvin Moto" height = "300" width="300">
+  <div class="internal">
+    <img src="profile44.png" alt="Lanvin Moto" height="300" width="300">
   </div>
-  <div class=internal>
-     div 7
+  <div class="internal">div 7</div>
+  <div class="internal">div 8</div>
+
+  <div class="right">
+    <button id="right-button" onclick="trackSwipe('right')">swipe right</button>
+    right div
   </div>
-  <div class=internal>
-     div 8
-  </div>
-</div>
-<div class="right">
-  <button id="right-button">
-  swipe right
-  </button>
-  right div
-</div>
-<script src="script.js"></script> 
+
+  <!-- ✅ Script for swipe tracking -->
+  <script>
+    function trackSwipe(direction) {
+      if (!window.digitalData.event) {
+        window.digitalData.event = [];
+      }
+
+      digitalData.event.push({
+        eventInfo: {
+          eventName: "carouselSwipe",
+          eventAction: "swipe " + direction,
+          eventTime: new Date().toISOString()
+        },
+        component: {
+          componentInfo: {
+            componentID: "carousel-architects"
+          }
+        }
+      });
+
+      console.log("Swipe event pushed:", direction);
+    }
+  </script>
+
+  <script src="script.js"></script>
+</body>
 </html>
