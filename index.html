@@ -1,179 +1,138 @@
-<!DOCTYPE html>
+</DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Insightful Architects</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insightful Architects</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <div class="logo"><img src = "INSightful.png" height = "80" width = "200"></div>
+        <nav>
+            <ul> 
+                <li><a href="$">HOME</a></li>
+                <li><a href="$">ABOUT US</a></li>
+                <li><a href="$">ARCHITECTS</a></li>
+                <li><a href="$">CONTACT</a></li>
+                <li><button class="login-btn">Login</button></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="banner">
+        <h1 class = 'banner-text'>Connecting You With<br> ARCHITECTS</h1>
+        <div class="search-bar-container">
+        <b class = 'search'> Search By </b>
+        <label for="'name" class ='icon'>
+            <img src="personname2.png" alt="User Icon" height="20" width="20">
+        </label>
+        <input type="text" placeholder="Name" class="search-bar-input">
+        <label for ="location" class="icon">
+            <img src="location2.png" alt="Location Icon" height="30" width="30">
+        </label>
+        <input type="text" id="location" placeholder="Location" class="search-bar-input">
+      <button class="search-bar-button">SEARCH</button> 
+        </div>
+        </section>
 
-  <!-- 📊 digitalData Layer for Analytics -->
-  <script>
-    window.digitalData = {
-      page: {
-        pageName: "Insightful Architects – Home",
-        siteSection: "Home",
-        pageType: "Landing",
-        language: "en",
-        publicationDate: "",     // optional
-        version: "v1.0"
-      },
-      user: {
-        isLoggedIn: false       // default false unless login state is known
-      },
-      architectProfiles: [
-        { name: "Lanvin Moto", role: "Senior Architect", rating: 4 },
-        { name: "John Carten", role: "Senior Architect", rating: 5 },
-        { name: "Jenny", role: "Senior Architect", rating: 4 }
-      ],
-      form: {
-        formName: "Feedback Form",
-        fields: ["First Name", "Last Name", "Email", "Contact Number", "Comment"]
-      }
-    };
-  </script>
-
-  <header>
-    <div class="logo">
-      <img src="INSightful.png" alt="Insightful Architects Logo" height="80" width="200">
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">ABOUT US</a></li>
-        <li><a href="#">ARCHITECTS</a></li>
-        <li><a href="#">CONTACT</a></li>
-        <li><button class="login-btn">Login</button></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="banner">
-    <h1 class="banner-text">Connecting You With<br> ARCHITECTS</h1>
-    <div class="search-bar-container">
-      <b class="search">Search By</b>
-      <label class="icon"><img src="personname2.png" alt="User Icon" height="20" width="20"></label>
-      <input type="text" placeholder="Name" class="search-bar-input">
-      <label class="icon"><img src="location2.png" alt="Location Icon" height="30" width="30"></label>
-      <input type="text" id="location" placeholder="Location" class="search-bar-input">
-      <button class="search-bar-button">SEARCH</button>
-    </div>
-  </section>
-
-  <section class="connect-steps">
-    <h2>Want to Connect with an Architect?</h2>
-    <div class="steps">
-      <div class="step">
-        <img src="search1.gif" alt="Search" height="120" width="120">
-        <br>
-        <img src="one1.png" alt="Step One" height="35" width="35" style="opacity: 0.2;">
-        <p><b>Search for the Top Architects and their projects</b></p>
-      </div>
-      <div class="step">
-        <img src="reachout11.gif" alt="Reach Out" height="120" width="120">
-        <br>
-        <img src="two2.png" alt="Step Two" height="35" width="35" style="opacity: 0.2;">
-        <p><b>Reach Out / Who We Are?</b></p>
-      </div>
-      <div class="step">
-        <img src="consultation1.gif" alt="Consultation" height="120" width="120">
-        <br>
-        <img src="three3.png" alt="Step Three" height="35" width="35" style="opacity: 0.2;">
-        <p><b>Consultation / Discover With Us</b></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="feedback-form">
-    <h2>Have Any Feedback for Us?<br> Contact Us Today</h2>
-    <form>
-      <div>
-        <input type="text" placeholder="First Name">
-        <input type="text" placeholder="Last Name">
-      </div>
-      <div>
-        <input type="email" placeholder="Email ID">
-        <input type="text" placeholder="Contact Number">
-      </div>
-      <div>
-        <textarea class="comment" placeholder="Comment"></textarea>
-      </div>
-      <div>
-        <button class="feedback-form-button">
-          <img src="R1.png" alt="Submit Icon" height="40" width="150">
-        </button>
-      </div>
-    </form>
-  </section>
-
-  <section class="architect-profiles">
-    <h2 class="profilesheading">VIEW MEMBER ARCHITECT PROFILES</h2>
-    <div class="profiles">
-      <div class="profile">
-        <img src="profile1.png" alt="Lanvin Moto Profile" height="300" width="300">
-        <h3>Lanvin Moto</h3>
-        <p>Senior Architect</p>
-        <div class="rating">★★★★☆</div>
-      </div>
-      <div class="profile">
-        <img src="profile22.png" alt="John Carten Profile" height="300" width="300">
-        <h3>John Carten</h3>
-        <p>Senior Architect</p>
-        <div class="rating">★★★★★</div>
-      </div>
-      <div class="profile">
-        <img src="profile3.png" alt="Jenny Profile" height="300" width="300">
-        <h3>Jenny</h3>
-        <p>Senior Architect</p>
-        <div class="rating">★★★★☆</div>
-      </div>
-    </div>
-    <button class="viewallbtn">View All Profiles</button>
-  </section>
-
-  <section>
-    <div class="newsletter-signup">
-      <h2 class="newslettertxt">Sign Up to Our Newsletter</h2>
-      <input type="email" placeholder="Enter Your Email Address">
-      <button class="newsletterbtn">Subscribe Now</button>
-    </div>
-  </section>
-
-  <footer>
+    <section class="connect-steps">
+        <h2>Want to Connect with an Architect?</h2>
+        <div class="steps">
+            <div class="step">
+                <img src="search1.gif" alt="Search" height ="120" width="120">
+                <br>
+                <img src="one1.png" alt="Search" height ="35" width="35"  style="opacity: 0.2;">
+                <p><B>Search for the Top Architects and their projects</p></B>
+            </div>
+            <div class="step">
+                <img src="reachout11.gif" alt="Reach Out" height ="120" width="120">
+                <br>
+                <img src="two2.png" alt="Search" height ="35" width="35"  style="opacity: 0.2;">
+                <p><b>Reach Out/ who are we ?</p></b>
+            </div>
+            <div class="step">
+                <img src="consultation1.gif" alt="Consultation" height ="120" width="120">
+                <br>
+                <img src="three3.png" alt="Search" height ="35" width="35" style="opacity: 0.2;">
+                <p><b>Consultation/ discover with us </p></b></div>
+            </div>
+        </div>
+    </section>
+    <section class="feedback-form">
+        <h2>Have Any Feedback for Us?<br> Contact Us Today</h2>
+        <form>
+            <div><input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name"></div>
+            <div><input type="email" placeholder="Email ID">
+            <input type="text" placeholder="Contact Number"></div>
+            <div><textarea class ="comment" placeholder="Comment"></textarea></div>
+             <div><button class="feedback-form-button">
+                <img src="R1.png" alt="Submit Icon" height="40" width="150"></button>
+                </div>
+        </form>
+    </section>
+    <section class="architect-profiles">
+        <h2 class ="profilesheading">VIEW MEMBER ARCHITECT PROFILES</h2>
+        <div class="profiles">
+            <div class="profile">
+                <img src="profile1.png" alt="Lanvin Moto" height = "300" width="300">
+                <h3>Lanvin Moto</h3>
+                <p>Senior Architect</p>
+                <div class="rating">★★★★☆</div>
+            </div>
+            <div class="profile">
+                <img src="profile22.png" alt="John Carten" height = "300" width="300">
+                <h3>John Carten</h3>
+                <p>Senior Architect</p>
+                <div class="rating">★★★★★</div>
+            </div>
+            <div class="profile">
+                <img src="profile3.png" alt="Jenny" height = "300" width="300">
+                <h3>Jenny</h3>
+                <p>Senior Architect</p>
+                <div class="rating">★★★★☆</div>
+            </div>
+        </div>
+        <button class ="viewallbtn">View All Profiles</button>
+    </section>
+    <section><div class="newsletter-signup">
+        <h2 class = "newslettertxt">Sign Up to Our Newsletter</h2>
+        <input type="email" placeholder="Enter Your Email Address">
+        <button class="newsletterbtn">Subscribe Now</button>
+        </div>
+    </section>
+       
+<footer>
     <div class="footer">
-      <div class="footerlogo">
-        <img src="INSightful.png" alt="Footer Logo">
-      </div>
-      <div class="socialmedia">
-        <h3>Follow us on</h3>
-        <a href="#"><img src="fb.gif" alt="Facebook" height="50"></a>
-        <a href="#"><img src="ig.gif" alt="Instagram" height="50"></a>
-        <a href="#"><img src="twitter.gif" alt="Twitter" height="50"></a>
-        <a href="#"><img src="pin.gif" alt="Pinterest" height="50"></a>
-        <a href="#"><img src="linkedin.gif" alt="LinkedIn" height="50"></a>
-      </div>
-      <div class="quicklinks">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Architects</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-      <div class="git">
-        <a href="#">Get in Touch</a>
-        <p>
-          123 Lorem Ipsum, Suite 400<br>
-          Sacramento, CA 2345<br>
-          888‑123‑4567<br>
-          info@insightfularchitects.com
-        </p>
-      </div>
-      <div>
+        <div class="footerlogo">
+            <img src="INSightful.png" alt="Footer Logo" style="max-width: 100%;">
+        </div>
+        <div class="socialmedia">
+            <h3>Follow us on</h3>
+            <a href="#"><img src="fb.gif" alt="Facebook" height="50" width></a>
+            <a href="#"><img src="ig.gif" alt="Instagram" height="50" width></a>
+            <a href="#"><img src="twitter.gif" alt="Twitter" height="50" width></a>
+            <a href="#"><img src="pin.gif" alt="pinterest" height="50" width></a>
+            <a href="#"><img src="linkedin.gif" alt="linkedin" height="50" width></a>
+        </div>
+        <div class="quicklinks">
+            <h3>Quick links</h3>
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">architect</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="git">
+            <a href="#">Get in touch</a>
+            <p>123 Lorum Ipsum, Suite 400 <br> Sacramento, CA 2345 <br> 888-123-4567 <br> info@nsightfularchitects.com </p>
+        </div>
+    <div>
         <hr>
-        <p class="copyright">© 2024 Insightful Architects, all rights reserved.</p>
-      </div>
+        <p class="copyright">copyright © 2024 Insightful Architects, all rights reserved.</p>
     </div>
- 
+    </div>
+</footer>
+</body>
+</html>
