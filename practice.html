@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Insightful Architects</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 
-  <!-- Adobe Analytics Data Layer -->
+  <!-- ✅ ACDL Initialization -->
   <script>
-    window.digitalData = {
+    window.adobeDataLayer = window.adobeDataLayer || [];
+    adobeDataLayer.push({
+      event: "pageLoad",
       page: {
-        pageName: "Insightful Architects - Swipe Profile Page",
-        siteSection: "Profiles",
-        pageType: "Profile Viewer",
-        language: "en"
+        pageInfo: {
+          pageName: "Insightful Architects - Swipe Profile Page",
+          siteSection: "Profiles",
+          language: "en",
+          pageType: "Profile Viewer"
+        }
       },
       user: {
         isLoggedIn: false
-      },
-      interaction: {
-        swipeLeftButtonId: "left-button",
-        swipeRightButtonId: "right-button"
       },
       profiles: [
         { name: "Lanvin Moto", image: "profile1.png" },
@@ -29,7 +29,7 @@
         { name: "Lanvin Moto", image: "profile33.png" },
         { name: "Lanvin Moto", image: "profile44.png" }
       ]
-    };
+    });
   </script>
 </head>
 
@@ -41,11 +41,11 @@
 
   <div class="center" id="content"></div>
 
-  <div class="internal"><img src="profile1.png" alt="Lanvin Moto" height="300" width="300"></div>
-  <div class="internal"><img src="profile3.png" alt="Lanvin Moto" height="300" width="300"></div>
-  <div class="internal"><img src="profile3.png" alt="Lanvin Moto" height="300" width="300"></div>
-  <div class="internal"><img src="profile33.png" alt="Lanvin Moto" height="300" width="300"></div>
-  <div class="internal"><img src="profile44.png" alt="Lanvin Moto" height="300" width="300"></div>
+  <div class="internal"><img src="profile1.png" alt="Lanvin Moto" height="300" width="300" /></div>
+  <div class="internal"><img src="profile3.png" alt="Lanvin Moto" height="300" width="300" /></div>
+  <div class="internal"><img src="profile3.png" alt="Lanvin Moto" height="300" width="300" /></div>
+  <div class="internal"><img src="profile33.png" alt="Lanvin Moto" height="300" width="300" /></div>
+  <div class="internal"><img src="profile44.png" alt="Lanvin Moto" height="300" width="300" /></div>
   <div class="internal">div 7</div>
   <div class="internal">div 8</div>
 
@@ -55,52 +55,22 @@
   </div>
 
   <script src="script.js"></script>
+
+  <!-- Example: Push swipe interaction to ACDL -->
+  <script>
+    document.getElementById('left-button').addEventListener('click', function () {
+      adobeDataLayer.push({
+        event: "swipeInteraction",
+        swipeDirection: "left"
+      });
+    });
+
+    document.getElementById('right-button').addEventListener('click', function () {
+      adobeDataLayer.push({
+        event: "swipeInteraction",
+        swipeDirection: "right"
+      });
+    });
+  </script>
 </body>
 </html>
-</DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insightful Architects</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<div class="left">
-  left div
-  <button id="left-button">
-  swipe left
-  </button>
-</div>
-<div class="center" id="content">
-  </div>
-  <div class=internal>
-    <img src="profile1.png" alt="Lanvin Moto" height = "300" width="300">
-  </div>
-  <div class=internal>
-    <img src="profile3.png" alt="Lanvin Moto" height = "300" width="300">
-  </div>
-  <div class=internal>
-    <img src="profile3.png" alt="Lanvin Moto" height = "300" width="300">
-  </div>
-  <div class=internal>
-    <img src="profile33.png" alt="Lanvin Moto" height = "300" width="300">
-  </div>
-  <div class=internal>
-    <img src="profile44.png" alt="Lanvin Moto" height = "300" width="300">
-  </div>
-  <div class=internal>
-     div 7
-  </div>
-  <div class=internal>
-     div 8
-  </div>
-</div>
-<div class="right">
-  <button id="right-button">
-  swipe right
-  </button>
-  right div
-</div>
-<script src="script.js"></script> 
-</html>
-
