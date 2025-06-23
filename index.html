@@ -9,20 +9,9 @@
 
 <body>
 
-  <!-- ✅ Adobe Client Data Layer (ACDL) Initialization -->
+  <!-- ✅ Digital Data Layer Initialization -->
   <script>
-    window.adobeDataLayer = window.adobeDataLayer || [];
-    adobeDataLayer.push({
-      event: "pageLoad",
-      page: {
-        pageInfo: {
-          pageName: "Insightful Architects - Home",
-          siteSection: "Homepage",
-          pageType: "Landing Page",
-          language: "en"
-        }
-      }
-    });
+    window.digitalData = window.digitalData || {};
   </script>
 
   <header>
@@ -33,7 +22,9 @@
         <li><a href="$">ABOUT US</a></li>
         <li><a href="$">ARCHITECTS</a></li>
         <li><a href="$">CONTACT</a></li>
-        <li><button class="login-btn">Login</button></li>
+        <li>
+          <button class="login-btn" onclick="trackLoginClick()">Login</button>
+        </li>
       </ul>
     </nav>
   </header>
@@ -80,7 +71,7 @@
 
   <section class="feedback-form">
     <h2>Have Any Feedback for Us?<br> Contact Us Today</h2>
-    <form onsubmit="handleFeedbackSubmit(); return false;">
+    <form>
       <div>
         <input type="text" placeholder="First Name">
         <input type="text" placeholder="Last Name">
@@ -103,33 +94,33 @@
   <section class="architect-profiles">
     <h2 class="profilesheading">VIEW MEMBER ARCHITECT PROFILES</h2>
     <div class="profiles">
-      <div class="profile" onclick="trackProfile('Lanvin Moto')">
+      <div class="profile">
         <img src="profile1.png" alt="Lanvin Moto" height="300" width="300">
         <h3>Lanvin Moto</h3>
         <p>Senior Architect</p>
         <div class="rating">★★★★☆</div>
       </div>
-      <div class="profile" onclick="trackProfile('John Carten')">
+      <div class="profile">
         <img src="profile22.png" alt="John Carten" height="300" width="300">
         <h3>John Carten</h3>
         <p>Senior Architect</p>
         <div class="rating">★★★★★</div>
       </div>
-      <div class="profile" onclick="trackProfile('Jenny')">
+      <div class="profile">
         <img src="profile3.png" alt="Jenny" height="300" width="300">
         <h3>Jenny</h3>
         <p>Senior Architect</p>
         <div class="rating">★★★★☆</div>
       </div>
     </div>
-    <button class="viewallbtn">View All Profiles</button>
+    <button class="viewallbtn" onclick="trackViewAllClick()">View All Profiles</button>
   </section>
 
   <section>
     <div class="newsletter-signup">
       <h2 class="newslettertxt">Sign Up to Our Newsletter</h2>
       <input type="email" placeholder="Enter Your Email Address" id="newsletterEmail">
-      <button class="newsletterbtn" onclick="trackNewsletterSignup()">Subscribe Now</button>
+      <button class="newsletterbtn">Subscribe Now</button>
     </div>
   </section>
 
@@ -166,34 +157,40 @@
     </div>
   </footer>
 
-  <!-- 📌 ACDL Event Triggers -->
+  <!-- ✅ DDL Event Scripts -->
   <script>
-    function handleFeedbackSubmit() {
-      adobeDataLayer.push({
-        event: "feedbackFormSubmitted",
-        form: {
-          formName: "Feedback Contact Form"
-        }
-      });
+    function trackLoginClick() {
+      window.digitalData.event = {
+        eventName: "buttonClick",
+        eventAction: "loginClick",
+        eventLabel: "Login Button - Header",
+        component: {
+          name: "Login Button",
+          location: "Header"
+        },
+        page: {
+          name: "Insightful Architects - Home"
+        },
+        timestamp: new Date().toISOString()
+      };
+      console.log("Digital Data Layer - Login:", window.digitalData.event);
     }
 
-    function trackProfile(name) {
-      adobeDataLayer.push({
-        event: "profileViewed",
-        profile: {
-          name: name
-        }
-      });
-    }
-
-    function trackNewsletterSignup() {
-      const email = document.getElementById('newsletterEmail').value;
-      adobeDataLayer.push({
-        event: "newsletterSignup",
-        user: {
-          email: email
-        }
-      });
+    function trackViewAllClick() {
+      window.digitalData.event = {
+        eventName: "buttonClick",
+        eventAction: "viewAllProfiles",
+        eventLabel: "View All Profiles Button - Architect Section",
+        component: {
+          name: "View All Profiles",
+          location: "Architect Profiles"
+        },
+        page: {
+          name: "Insightful Architects - Home"
+        },
+        timestamp: new Date().toISOString()
+      };
+      console.log("Digital Data Layer - View All Profiles:", window.digitalData.event);
     }
   </script>
 
