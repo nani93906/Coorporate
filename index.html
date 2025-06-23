@@ -157,7 +157,7 @@
     </div>
   </footer>
 
-  <!-- ✅ DDL Event Scripts -->
+  <!-- ✅ DDL Click Tracking Script -->
   <script>
     function trackLoginClick() {
       window.digitalData.event = {
@@ -173,26 +173,27 @@
         },
         timestamp: new Date().toISOString()
       };
-      console.log("Digital Data Layer - Login:", window.digitalData.event);
+      console.log("Digital Data Layer - Login Click:", window.digitalData.event);
     }
 
     function trackViewAllClick() {
       window.digitalData.event = {
         eventName: "buttonClick",
         eventAction: "viewAllProfiles",
-        eventLabel: "View All Profiles Button - Architect Section",
+        eventLabel: "View All Profiles Button",
         component: {
           name: "View All Profiles",
-          location: "Architect Profiles"
+          location: "Architect Section"
         },
         page: {
           name: "Insightful Architects - Home"
         },
         timestamp: new Date().toISOString()
       };
-      console.log("Digital Data Layer - View All Profiles:", window.digitalData.event);
+      console.log("Digital Data Layer - View All Click:", window.digitalData.event);
     }
   </script>
 
 </body>
 </html>
+
